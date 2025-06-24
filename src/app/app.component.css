@@ -1,0 +1,63 @@
+.meme-container {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    color:red;
+}
+
+.meme-image {
+    width: 100%;
+    height: auto;
+}
+
+.meme-text {
+    position:absolute;
+    width: 100%;
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+}
+.top{
+    top: 10px;
+}
+
+.bottom{
+    bottom:10px;
+}
+
+.controls{
+    margin-top: 20px;
+    text-align: center;
+}
+
+input, select {
+    margin: 5px;
+    padding: 5px;
+}
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }

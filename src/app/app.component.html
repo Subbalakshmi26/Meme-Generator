@@ -1,0 +1,24 @@
+<h1>Meme Generator</h1>
+
+<div class="meme-container">
+  <img [src] ="selectedImage" alt="Meme" class="meme-image"/>
+  <div class="meme-text top">{{ topText }}</div>
+  <div class="meme-text bottom">{{ bottomText }}</div>
+</div>
+<div class="controls">
+  <input type="text" [(ngModel)]="topText" placeholder="Top text/">
+  <input type="text" [(ngModel)]="bottomText" placeholder="Bottom text"/>
+  <select [(ngModel)]="selectedImage">
+    <option *ngFor="let img of memeImages" [value]="img">{{ img }}</option>
+  </select>
+  <button (click)="downloadMeme()">Download</button>
+</div>  
+
+<button (click)="generateMeme()">Generate Meme</button>
+
+<div *ngIf="showModal" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="showModal = false">&times;</span>
+    <p> Meme generated successfully!</p>
+  </div>
+</div>
